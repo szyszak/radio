@@ -18,30 +18,35 @@ const tracksData = [
     album: 'Bail Set as $6.000.000',
     song: 'Gorilla Rock',
     url: 'http://localhost:3002/music/gorilla',
+    index: 0,
   },
   {
     artist: 'Editors',
     album: 'The Back Room',
     song: 'Munich',
     url: 'http://localhost:3002/music/munich',
+    index: 1,
   },
   {
     artist: 'Blink-182',
     album: 'Neighborhoods',
     song: 'Natives',
     url: 'http://localhost:3002/music/natives',
+    index: 2,
   },
   {
     artist: 'Calabrese',
     album: 'Lust for Sacrilege',
     song: 'Serpentflame',
     url: 'http://localhost:3002/music/serpentflame',
+    index: 3,
   },
   {
     artist: 'Miami Horror',
     album: 'Illumination',
     song: 'Sometimes',
     url: 'http://localhost:3002/music/sometimes',
+    index: 4,
   },
 ];
 
