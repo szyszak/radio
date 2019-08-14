@@ -5,6 +5,7 @@ const tracksData = [
     song: 'Quantum Gravity (feat. Andromeda Dreams)',
     URL: 'http://localhost:3001/music/quantum-gravity-feat-andromeda-dreams.mp3',
     cover: 'http://localhost:3001/covers/earmake-cosmic_hero.jpg',
+    index: 0,
   },
   {
     artist: 'El Kirpitch',
@@ -12,6 +13,7 @@ const tracksData = [
     song: 'Systems Quafilintabilization',
     URL: 'http://localhost:3001/music/systems-quafilintabilization.mp3',
     cover: 'http://localhost:3001/covers/el_kirpitch-the_retribution.jpg',
+    index: 1,
   },
   {
     artist: 'Nightdrive',
@@ -19,6 +21,7 @@ const tracksData = [
     song: 'Collaborations',
     URL: 'http://localhost:3001/music/collaborations.mp3',
     cover: 'http://localhost:3001/covers/nightdrive-luminance.jpg',
+    index: 2,
   },
   {
     artist: 'Reminiscor',
@@ -26,6 +29,7 @@ const tracksData = [
     song: 'Space Exploration',
     URL: 'http://localhost:3001/music/space-exploration.mp3',
     cover: 'http://localhost:3001/covers/reminiscor-reflections.jpg',
+    index: 3,
   },
   {
     artist: 'SPACEINVADER',
@@ -33,6 +37,7 @@ const tracksData = [
     song: 'Sequential Movement',
     URL: 'http://localhost:3001/music/sequential-movement.mp3',
     cover: 'http://localhost:3001/covers/spaveinvader-escape.jpg',
+    index: 4,
   },
 ];
 
