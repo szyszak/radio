@@ -32,7 +32,7 @@ const tracksData = [
     song: 'Space Exploration',
     URL: 'http://localhost:3001/music/space-exploration.mp3',
     cover: 'http://localhost:3001/covers/reminiscor-reflections.jpg',
-    duration: 226,
+    duration: 225,
     index: 3,
   },
   {
@@ -41,7 +41,7 @@ const tracksData = [
     song: 'Sequential Movement',
     URL: 'http://localhost:3001/music/sequential-movement.mp3',
     cover: 'http://localhost:3001/covers/spaveinvader-escape.jpg',
-    duration: 214,
+    duration: 213,
     index: 4,
   },
 ];
