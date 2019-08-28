@@ -23,7 +23,6 @@ app.get('/tracks', (req, res) => {
 app.get('/music/:fileName', (req, res) => {
   const { fileName } = req.params;
 
-  console.log(`SOMEBODY REQUESTED: ${fileName}`);
   res.set('content-type', 'audio/mp3');
   res.sendFile(path.join(__dirname, '/public/music', fileName));
 });
