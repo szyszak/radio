@@ -19,19 +19,21 @@ app.get('/tracks', (req, res) => {
 });
 
 // SEND TRACKS
-// TODO: cache control
 app.get('/music/:fileName', (req, res) => {
   const { fileName } = req.params;
 
-  res.set('content-type', 'audio/mp3');
+  res.set('Content-Type', 'audio/mp3');
+  res.set('Cache-Control', 'max-age=31536000');
+  res.set('Cache-Control', 'public');
   res.sendFile(path.join(__dirname, '/public/music', fileName));
 });
 
 // SEND COVER ART
-// TODO: cache control
 app.get('/covers/:fileName', (req, res) => {
   const { fileName } = req.params;
 
+  res.set('Cache-Control', 'max-age=31536000');
+  res.set('Cache-Control', 'public');
   res.sendFile(path.join(__dirname, '/public/covers', `${fileName}`));
 });
 
@@ -39,6 +41,9 @@ app.get('/covers/:fileName', (req, res) => {
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '/public/index.html'));
 });
+
+// SEND STATIC FILES
+app.use(express.static('public'));
 
 // START SERVER
 app.listen(PORT, () => {
