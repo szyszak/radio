@@ -34,7 +34,7 @@ app.get('/covers/:fileName', (req, res) => {
 
   res.set('Cache-Control', 'max-age=31536000');
   res.set('Cache-Control', 'public');
-  res.sendFile(path.join(__dirname, '/public/covers', `${fileName}`));
+  res.sendFile(path.join(__dirname, '/public/covers', fileName));
 });
 
 // SEND INDEX PAGE
