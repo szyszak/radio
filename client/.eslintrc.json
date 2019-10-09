@@ -22,7 +22,6 @@
     "import/no-named-as-default": "off",
     "import/no-named-as-default-member": "off",
     "react/prop-types": "off",
-    "react/jsx-one-expression-per-line": "off",
-    "object-property-newline": "off"
+    "react/jsx-one-expression-per-line": "off"
   }
 }

@@ -5,49 +5,12 @@
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Cairo&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css?family=Cairo&display=swap" rel="stylesheet" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>Synthwave Radio</title>
-    <!-- dirty hack to make animated background work -->
-    <style>
-      .background {
-        z-index: -1;
-        position: fixed;
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: 0;
-        animation-name: rotateColor;
-        animation-play-state: paused;
-        animation-duration: 6s;
-        animation-timing-function: linear;
-        animation-iteration-count: infinite;
-      }
-
-      .animate {
-        animation-play-state: running;
-      }
-
-      @keyframes rotateColor {
-        0% {
-          filter: hue-rotate(0deg);
-        }
-
-        50% {
-          filter: hue-rotate(360deg);
-        }
-
-        100% {
-          filter: hue-rotate(0deg);
-        }
-      }
-    </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <img class="background" src="%PUBLIC_URL%/bg1.jpg" alt="" />
     <div id="root"></div>
   </body>
 </html>

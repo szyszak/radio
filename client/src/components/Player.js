@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { formatTime } from '../util';
 import ProgressBar from './ProgressBar';
 import TimeDisplay from './TimeDisplay';
+import Background from './Background';
 import playIcon from '../assets/play.png';
 import pauseIcon from '../assets/pause.png';
 import nextIcon from '../assets/next.png';
@@ -96,7 +97,6 @@ const Player = ({ trackData, setCurrentTrack }) => {
     }
 
     trackData.howl.stop();
-    document.querySelector('.background').classList.remove('animate');
     setIsPlaying(false);
     cancelAnimationFrame(loopID.current);
     setProgress(0);
@@ -106,7 +106,6 @@ const Player = ({ trackData, setCurrentTrack }) => {
 
   const togglePlay = () => {
     if (!isPlaying) {
-      document.querySelector('.background').classList.add('animate');
       setIsPlaying(!isPlaying);
       trackData.howl.play();
       updateLoop();
@@ -115,7 +114,6 @@ const Player = ({ trackData, setCurrentTrack }) => {
         trackData.howl.on('end', () => skip('NEXT_TRACK'));
       }
     } else {
-      document.querySelector('.background').classList.remove('animate');
       setIsPlaying(!isPlaying);
       trackData.howl.pause();
       cancelAnimationFrame(loopID.current);
@@ -144,6 +142,8 @@ const Player = ({ trackData, setCurrentTrack }) => {
   // RENDER
   return (
     <Wrapper>
+      <Background isPlaying={isPlaying} />
+
       {trackData === undefined || !trackData.howl ? (
         <h2>loading...</h2>
       ) : (
@@ -164,10 +164,7 @@ const Player = ({ trackData, setCurrentTrack }) => {
             </ControlBtn>
 
             <ControlBtn type="button" onClick={() => togglePlay()}>
-              <Icon
-                src={isPlaying ? pauseIcon : playIcon}
-                alt={isPlaying ? 'pause' : 'play'}
-              />
+              <Icon src={isPlaying ? pauseIcon : playIcon} alt={isPlaying ? 'pause' : 'play'} />
             </ControlBtn>
 
             <ControlBtn type="button" onClick={() => skip('NEXT_TRACK')}>
@@ -177,11 +174,7 @@ const Player = ({ trackData, setCurrentTrack }) => {
 
           <License>
             All music, art and icons supplied by{' '}
-            <LicenseLink
-              href="https://icons8.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <LicenseLink href="https://icons8.com/" target="_blank" rel="noopener noreferrer">
               Icons8
             </LicenseLink>
           </License>
