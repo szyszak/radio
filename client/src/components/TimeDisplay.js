@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 // STYLES
 const Wrapper = styled.div`
@@ -13,5 +14,11 @@ const TimeDisplay = ({ currentTime, duration }) => (
     {currentTime}/{duration}
   </Wrapper>
 );
+
+// PROP TYPES
+TimeDisplay.propTypes = {
+  currentTime: PropTypes.string.isRequired,
+  duration: PropTypes.string.isRequired,
+};
 
 export default TimeDisplay;

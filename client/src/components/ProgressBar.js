@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 // STYLES
 const Outer = styled.div`
@@ -35,6 +36,11 @@ const ProgressBar = ({ progress, setSeek }) => {
       <Inner progress={progress} />
     </Outer>
   );
+};
+
+ProgressBar.propTypes = {
+  progress: PropTypes.number.isRequired,
+  setSeek: PropTypes.func.isRequired,
 };
 
 export default ProgressBar;

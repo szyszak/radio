@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import { formatTime } from '../util';
 import ProgressBar from './ProgressBar';
 import TimeDisplay from './TimeDisplay';
@@ -182,6 +183,20 @@ const Player = ({ trackData, setCurrentTrack }) => {
       )}
     </Wrapper>
   );
+};
+
+Player.propTypes = {
+  trackData: PropTypes.shape({
+    URL: PropTypes.string.isRequired,
+    album: PropTypes.string.isRequired,
+    artist: PropTypes.string.isRequired,
+    cover: PropTypes.string.isRequired,
+    duration: PropTypes.number.isRequired,
+    howl: PropTypes.object,
+    index: PropTypes.number.isRequired,
+    song: PropTypes.string.isRequired,
+  }),
+  setCurrentTrack: PropTypes.func.isRequired,
 };
 
 export default Player;
