@@ -164,7 +164,10 @@ const Player = ({ trackData, setCurrentTrack }) => {
             </ControlBtn>
 
             <ControlBtn type="button" onClick={() => togglePlay()}>
-              <Icon src={isPlaying ? pauseIcon : playIcon} alt={isPlaying ? 'pause' : 'play'} />
+              <Icon
+                src={isPlaying ? pauseIcon : playIcon}
+                alt={isPlaying ? 'pause' : 'play'}
+              />
             </ControlBtn>
 
             <ControlBtn type="button" onClick={() => skip('NEXT_TRACK')}>
@@ -174,7 +177,11 @@ const Player = ({ trackData, setCurrentTrack }) => {
 
           <License>
             All music, art and icons supplied by{' '}
-            <LicenseLink href="https://icons8.com/" target="_blank" rel="noopener noreferrer">
+            <LicenseLink
+              href="https://icons8.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Icons8
             </LicenseLink>
           </License>
