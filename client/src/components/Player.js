@@ -81,7 +81,7 @@ const Player = ({ trackData, setCurrentTrack }) => {
   const updateLoop = () => {
     // gotta do this check due to a bug in Howler library
     if (typeof trackData.howl.seek() === 'number') {
-      const newProgress = (trackData.howl.seek() / trackData.duration) * 100;
+      const newProgress = trackData.howl.seek() / trackData.duration;
       setProgress(newProgress);
 
       if (formatTime(trackData.howl.seek()) !== currentTime) {

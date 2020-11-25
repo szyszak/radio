@@ -11,12 +11,13 @@ const Outer = styled.div`
   cursor: pointer;
 `;
 
-const Inner = styled.div.attrs(props => ({
-  style: { width: `${props.progress}%` },
+const Inner = styled.div.attrs((props) => ({
+  style: { transform: `scaleX(${props.progress})` },
 }))`
   height: 10px;
+  /* width: 0%; */
   background-color: #3d3d3d;
-  width: 0%;
+  transform-origin: left;
 `;
 
 // COMPONENT
@@ -32,7 +33,7 @@ const ProgressBar = ({ progress, setSeek }) => {
   };
 
   return (
-    <Outer onClick={ev => handleClick(ev)} ref={progressRef}>
+    <Outer onClick={(ev) => handleClick(ev)} ref={progressRef}>
       <Inner progress={progress} />
     </Outer>
   );
